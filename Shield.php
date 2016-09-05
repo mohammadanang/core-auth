@@ -147,6 +147,8 @@ class Shield extends Guard implements ShieldContract
             // determine role index
             $index = array_search($_role, $_permission);
 
+            unset($this->permissions[$permission][$index]);
+
             // if it an empty array, remove it entirely
             if (count($this->permissions[$permission]) < 1) {
                 unset($this->permissions[$permission]);

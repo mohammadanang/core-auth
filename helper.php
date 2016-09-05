@@ -14,7 +14,7 @@ if (!function_exists('shield')) {
      */
     function shield()
     {
-        return app('auth.drive');
+        return app('auth.driver');
     }
 
     /**
