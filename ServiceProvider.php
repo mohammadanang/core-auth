@@ -19,7 +19,7 @@ class ServiceProvider extends LaravelServiceProvider
      */
     public function register()
     {
-        $this->app['auth']->extend('apollo16.shiled', function ($app) {
+        $this->app['auth']->extend('apollo16.shield', function ($app) {
             $shield = new Shield(
                 new EloquentUserProvider($app['hash'], $app['config']->get('auth.model')),
                 $app['session.store']
